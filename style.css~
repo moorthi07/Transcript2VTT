@@ -1,0 +1,27 @@
+html{
+	background:whitesmoke;
+}
+
+.column{
+	float:left;
+	width:33.33%; height: 80%;
+	overflow-y: scroll;
+	background:whitesmoke;
+}
+.descrip{
+	float:left;
+	width:33%;
+	height:30px;
+	overflow-y: scroll;
+	background:whitesmoke;
+}
+.heads_up{
+	color: red;
+	background:yellow;
+}
+.green_light{
+	color: green;
+	float: right;
+	display: none;
+	background:whitesmoke;
+}
