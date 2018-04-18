@@ -15,7 +15,7 @@
 		document.getElementById("url_heads_up").style.display = "none";
 
 		video = $("#active_video")[0];
-		video.playbackRate= 2.0;
+		video.playbackRate= 1.75;
 	});
 
 	$("#submit_transcript").click(function () {
@@ -59,13 +59,17 @@
 			$(this).slideUp();
 			var additive_text = "";
 			current_timestamp = convert_timestamp(video.currentTime);
-			additive_text+=current_timestamp + "\n" + this.textContent + "\n" + current_timestamp + " --> ";
+			additive_text+=current_timestamp + "\n" + this.textContent.replace(/\r?\n|\r/g,"") + "\n" + current_timestamp + " --> ";
 
 			var vtt_text = document.getElementById("vtt_renderer").textContent + additive_text;
 			document.getElementById("vtt_renderer").textContent=vtt_text;
 		//else:
 			//heads up
 		})
+
+		function onkp(){
+			console.log(video.currentTime);
+		}
 
 	function convert_timestamp(seconds){
 

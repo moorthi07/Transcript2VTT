@@ -32,14 +32,13 @@ Streaming VTT Tool
 		<textarea id="transcript_entry" style="height:400px;width:85%;">PASTE TRANSCRIPT HERE</textarea>
 		<input type="button" id="submit_transcript" value="Submit"></input>
 	</div>
-	<div id="transcript_renderer" style="overflow-y: scroll;"></div>
+	<div id="transcript_renderer" style="overflow-y: scroll;" onkeydown="onkp()"></div>
 </span>
 
 <span class="column" id="vtt_column">
 <div id="url_heads_up" class="heads_up">Please enter video URL</div>
 <div id="transcript_heads_up" class="heads_up">Please paste the video transcript</div>
 <div id="vtt_renderer" style="overflow-y: scroll;white-space: pre;">WEBVTT
-
 0:01.000 --> </div>
 <button id="download_vtt" style="display:none;">Download VTT</button>
 </span>
