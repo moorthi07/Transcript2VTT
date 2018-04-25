@@ -40,7 +40,21 @@
 
 		for(i=0;i<sliced_transcript.length;i++){
 			if(sliced_transcript[i].length>2 && sliced_transcript[i].charAt(0) != "\""){
-				id_tag='</p><p>'+sliced_transcript[i];
+				//while words<thresh
+					//add space plus first line from next word]
+					if(i<4){
+						console.log(sliced_transcript[i].split(" ").length);
+					}
+				word_chunk = sliced_transcript[i];
+
+				while (word_chunk.split(" ").length<=24){
+					i++;
+					word_chunk+=" "+sliced_transcript[i]
+					sliced_transcript.push("");
+				}
+
+
+				id_tag='</p><p>'+word_chunk;
 
 				parsed_slices.push(id_tag);
 				id_count++;
@@ -53,7 +67,7 @@
 		//check char lengths of slices
 		for(s=0; s<parsed_slices.length; s++){
 				if(parsed_slices[s].length>40){
-					console.log(""+ s + " length:"+parsed_slices[s].length);
+					//console.log(""+ s + " length:"+parsed_slices[s].length);
 				}
 		}
 
