@@ -1,7 +1,6 @@
 (function ($) {
 
 	var ready=false;
-
 	var video;
 
 	$("#submit_mp4").click(function () {
@@ -39,7 +38,7 @@
 
 		for(i=0;i<sliced_transcript.length;i++){
 			if(sliced_transcript[i].length>2 && sliced_transcript[i].charAt(0) != "\""){
-				id_tag='</p><p id="phrase_' + id_count +'" >'+sliced_transcript[i];
+				id_tag='</p><p>'+sliced_transcript[i];
 
 				parsed_slices.push(id_tag);
 				id_count++;
@@ -48,6 +47,8 @@
 				parsed_slices[last_index]+=sliced_transcript[i];
 			}
 		}
+
+		//check
 		render_transcript=parsed_slices.join("");
 
 		$("#transcript_renderer").html('<p>' + render_transcript+'</p>');
