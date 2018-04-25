@@ -48,7 +48,15 @@
 			}
 		}
 
-		//check
+		//check char lengths of slices
+		for(s=0; s<parsed_slices.length; s++){
+				if(parsed_slices[s].length>40){
+					console.log(""+ s + " length:"+parsed_slices[s].length)
+
+				}
+		}
+
+
 		render_transcript=parsed_slices.join("");
 
 		$("#transcript_renderer").html('<p>' + render_transcript+'</p>');
