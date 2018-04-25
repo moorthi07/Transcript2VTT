@@ -2,6 +2,65 @@
 
 	var ready=false;
 	var video;
+	var speed=1.0;
+
+	$(document).keypress(function(e) {
+    if(e.which == 49) {
+        console.log('You pressed 1!');
+				speed=.5;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+		if(e.which == 50) {
+        console.log('You pressed 2!');
+				speed=.75;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+		if(e.which == 51) {
+        console.log('You pressed 3!');
+				speed=1.0;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+		if(e.which == 52) {
+        console.log('You pressed 4!');
+				speed=1.25;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+		if(e.which == 53) {
+        console.log('You pressed 5!');
+				speed=1.5;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+		if(e.which == 54) {
+        console.log('You pressed 6!');
+				speed=1.75;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+		if(e.which == 55) {
+        console.log('You pressed 7!');
+				speed=2.0;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+		if(e.which == 56) {
+        console.log('You pressed 8!');
+				speed=2.25;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+		if(e.which == 57) {
+        console.log('You pressed 9!');
+				speed=2.5;
+				document.getElementById("ready").textContent="Playback Speed: "+speed;
+				video.playbackRate=speed;
+    }
+
+	});
 
 	$("#submit_mp4").click(function () {
 		var video_url = document.getElementById("mp4_url").value;
@@ -14,11 +73,12 @@
 		document.getElementById("url_heads_up").style.display = "none";
 
 		video = $("#active_video")[0];
-		video.playbackRate= 1.75;
+		video.playbackRate= .75;
 	});
 
 	$("#submit_transcript").click(function () {
 		var transcript_text=document.getElementById("transcript_entry").value;
+		console.log(transcript_text);
 		document.getElementById("transcript_submission").style.display = "none";
 		document.getElementById("transcript_heads_up").style.display = "none";
 
