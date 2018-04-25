@@ -28,6 +28,8 @@
 		parsed_transcript = parsed_transcript.split('?').join('?</p><p>');
 		parsed_transcript = parsed_transcript.split('!').join('!</p><p>');
 		parsed_transcript = parsed_transcript.split(".").join(".</p><p>");
+		parsed_transcript = parsed_transcript.split(",").join(",</p><p>");
+		parsed_transcript = parsed_transcript.split("–").join("–</p><p>");
 		parsed_transcript += "</p>";
 
 		var sliced_transcript = parsed_transcript.split("</p><p>");
@@ -51,8 +53,7 @@
 		//check char lengths of slices
 		for(s=0; s<parsed_slices.length; s++){
 				if(parsed_slices[s].length>40){
-					console.log(""+ s + " length:"+parsed_slices[s].length)
-
+					console.log(""+ s + " length:"+parsed_slices[s].length);
 				}
 		}
 
