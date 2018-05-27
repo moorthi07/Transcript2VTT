@@ -5,5 +5,8 @@ function run(){
 }
 //jQuery("#hook_tag").append(video_column);
 //document.body.append(video_column);
-run();
+//run();
 console.log('duh');
+video_column = document.createElement('div');
+video_column.setAttribute('id','hook_tag');
+video_column.innerHTML = "check";
