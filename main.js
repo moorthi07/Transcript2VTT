@@ -1,4 +1,4 @@
-function run{
+function run(){
 video_column = document.createElement('div');
 video_column.setAttribute('id','hook_tag');
 video_column.innerHTML = "check";
