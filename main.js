@@ -6,3 +6,4 @@ function run(){
 //jQuery("#hook_tag").append(video_column);
 //document.body.append(video_column);
 run();
+console.log('duh');
